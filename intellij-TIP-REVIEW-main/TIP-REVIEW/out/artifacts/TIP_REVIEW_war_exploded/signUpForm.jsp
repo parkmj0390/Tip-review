@@ -116,8 +116,11 @@
           </div>
           <!-- 회원가입 버튼 -->
           <!-- <button type="submit" class="signup-btn btn btn-primary btn-block">회원가입</button> -->
-          <button type="submit" class="signup-btn">회원가입</button>
+          <!-- 회원가입 버튼 -->
+          <button type="submit" class="signup-btn" style="margin-bottom: 10px;">회원가입</button>
+          <!-- 로그인 화면으로 버튼 -->
           <a href="/TIP_REVIEW_war_exploded/home" class="btn btn-secondary btn-block">로그인 화면으로</a>
+
         </form>
       </div>
     </div>
