@@ -122,9 +122,35 @@
           <a href="/TIP_REVIEW_war_exploded/home" class="btn btn-secondary btn-block">로그인 화면으로</a>
 
         </form>
+        <script>
+          document.querySelector('.signup-btn').addEventListener('click', function (event) {
+            const username = document.getElementById('username').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (!username || !email || !password) {
+              event.preventDefault();
+              alert("모든 필드를 입력해주세요.");
+              return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+              event.preventDefault();
+              alert("유효한 이메일 주소를 입력해주세요.");
+              return;
+            }
+
+            if (password.length < 6) {
+              event.preventDefault();
+              alert("비밀번호는 최소 6자 이상이어야 합니다.");
+            }
+          });
+        </script>
       </div>
     </div>
   </div>
 </div>
+
 </body>
 </html>
